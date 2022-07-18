@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_bloc_1/screens/recycle_bin_screen.dart';
-import 'package:todo_bloc_1/screens/tabs_screen.dart';
+import 'package:todo_app/screens/recycle_bin_screen.dart';
+import 'package:todo_app/screens/tabs_screen.dart';
 
 import '../blocs/bloc_exports.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:todo_bloc_1/screens/edit_task_screen.dart';
-import 'package:todo_bloc_1/widgets/popup_menu.dart';
+import 'package:todo_app/screens/edit_task_screen.dart';
+import 'package:todo_app/widgets/popup_menu.dart';
 
 import '../blocs/bloc_exports.dart';
 import '../models/task.dart';

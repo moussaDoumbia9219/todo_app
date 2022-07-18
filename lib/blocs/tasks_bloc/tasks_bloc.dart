@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:todo_bloc_1/blocs/bloc_exports.dart';
+import 'package:todo_app/blocs/bloc_exports.dart';
 
 import '../../models/task.dart';
 
@@ -39,7 +39,7 @@ class TasksBloc extends HydratedBloc<TasksEvent, TasksState> {
     if (task.isDone == false) {
       if (task.isFavorite == false) {
         pendingTasks = List.from(pendingTasks)..remove(task);
-        completedTasks.insert(0, task.copyWith(isDeleted: true));
+        completedTasks.insert(0, task.copyWith(isDone: true));
       } else {
         var taskIndex = favoriteTasks.indexOf(task);
         pendingTasks = List.from(pendingTasks)..remove(task);
@@ -51,7 +51,7 @@ class TasksBloc extends HydratedBloc<TasksEvent, TasksState> {
     } else {
       if (task.isFavorite == false) {
         completedTasks = List.from(pendingTasks)..remove(task);
-        pendingTasks.insert(0, task.copyWith(isDeleted: false));
+        pendingTasks.insert(0, task.copyWith(isDone: false));
       } else {
         var taskIndex = favoriteTasks.indexOf(task);
         completedTasks = List.from(pendingTasks)..remove(task);
@@ -61,6 +61,11 @@ class TasksBloc extends HydratedBloc<TasksEvent, TasksState> {
           ..insert(taskIndex, task.copyWith(isDone: false));
       }
     }
+
+    print(pendingTasks);
+    print(completedTasks);
+    print(state.favoriteTasks);
+    print(state.removedTasks);
 
     emit(TasksState(
       pendingTasks: pendingTasks,

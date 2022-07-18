@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:todo_bloc_1/screens/completed_task_screen.dart';
-import 'package:todo_bloc_1/screens/favorite_task_screen.dart';
-import 'package:todo_bloc_1/screens/my_drawer.dart';
-import 'package:todo_bloc_1/screens/pending_screen.dart';
+import 'package:todo_app/screens/completed_task_screen.dart';
+import 'package:todo_app/screens/favorite_task_screen.dart';
+import 'package:todo_app/screens/my_drawer.dart';
+import 'package:todo_app/screens/pending_screen.dart';
 
 import 'add_task_screen.dart';
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({Key? key}) : super(key: key);
+  TabsScreen({Key? key}) : super(key: key);
   static const id = 'tabs_Screen';
 
   @override
@@ -16,8 +16,8 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, dynamic>> _pageDetails = [
-    {'pageName': const PendingScreen(), 'title': 'Pending Tasks'},
-    {'pageName': const CompletedTaskScreen(), 'title': 'Completed Tasks'},
+    {'pageName': PendingScreen(), 'title': 'Pending Tasks'},
+    {'pageName': CompletedTaskScreen(), 'title': 'Completed Tasks'},
     {'pageName': const FavoriteTaskScreen(), 'title': 'Favorite Tasks'},
   ];
 

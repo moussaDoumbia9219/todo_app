@@ -8,8 +8,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:todo_bloc_1/main.dart';
-import 'package:todo_bloc_1/services/app_router.dart';
+import 'package:todo_app/main.dart';
+import 'package:todo_app/services/app_router.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
