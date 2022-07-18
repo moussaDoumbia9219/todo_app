@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/models/task.dart';
+import 'package:todo_app/data/models/task.dart';
 
 import '../blocs/bloc_exports.dart';
 import '../widgets/tasks_list.dart';
 
 class FavoriteTaskScreen extends StatelessWidget {
-  const FavoriteTaskScreen({Key? key}) : super(key: key);
+  FavoriteTaskScreen({Key? key}) : super(key: key);
   static const id = 'task_screen';
 
   @override

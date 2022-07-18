@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/completed_task_screen.dart';
-import 'package:todo_app/screens/favorite_task_screen.dart';
-import 'package:todo_app/screens/my_drawer.dart';
-import 'package:todo_app/screens/pending_screen.dart';
+import 'package:todo_app/presentation/pages/completed_task_screen.dart';
+import 'package:todo_app/presentation/pages/favorite_task_screen.dart';
+import 'package:todo_app/presentation/pages/my_drawer.dart';
+import 'package:todo_app/presentation/pages/pending_screen.dart';
 
 import 'add_task_screen.dart';
 
@@ -18,7 +18,7 @@ class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, dynamic>> _pageDetails = [
     {'pageName': PendingScreen(), 'title': 'Pending Tasks'},
     {'pageName': CompletedTaskScreen(), 'title': 'Completed Tasks'},
-    {'pageName': const FavoriteTaskScreen(), 'title': 'Favorite Tasks'},
+    {'pageName': FavoriteTaskScreen(), 'title': 'Favorite Tasks'},
   ];
 
   var _selectedPageIndex = 0;

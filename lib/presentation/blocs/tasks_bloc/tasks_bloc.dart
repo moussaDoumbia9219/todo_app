@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:todo_app/blocs/bloc_exports.dart';
+import 'package:todo_app/presentation/blocs/bloc_exports.dart';
 
-import '../../models/task.dart';
+import '../../../data/models/task.dart';
 
 part 'tasks_event.dart';
 part 'tasks_state.dart';
@@ -58,19 +58,14 @@ class TasksBloc extends HydratedBloc<TasksEvent, TasksState> {
         pendingTasks.insert(0, task.copyWith(isDone: false));
         favoriteTasks = List.from(favoriteTasks)
           ..remove(task)
-          ..insert(taskIndex, task.copyWith(isDone: false));
+          ..insert(taskIndex, task.copyWith(isDone: true));
       }
     }
-
-    print(pendingTasks);
-    print(completedTasks);
-    print(state.favoriteTasks);
-    print(state.removedTasks);
 
     emit(TasksState(
       pendingTasks: pendingTasks,
       completedTasks: completedTasks,
-      favoriteTasks: state.favoriteTasks,
+      favoriteTasks: favoriteTasks,
       removedTasks: state.removedTasks,
     ));
   }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:todo_app/screens/tabs_screen.dart';
-import 'package:todo_app/services/app_router.dart';
-import 'package:todo_app/services/app_theme.dart';
+import 'package:todo_app/presentation/pages/tabs_screen.dart';
+import 'package:todo_app/core/router/app_router.dart';
+import 'package:todo_app/core/theme/app_theme.dart';
 
-import 'blocs/bloc_exports.dart';
+import 'presentation/blocs/bloc_exports.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
