@@ -1,16 +1,16 @@
-# todo_app
+# TODO APP
 
-A new Flutter project.
+A todo app built on bloc and hydrate bloc for local storage using clean architecture. Test coverage was not including because most of the logic is coming from bloc state management.
 
-## Getting Started
+## feature
 
-This project is a starting point for a Flutter application.
+This todo app have as feature:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- add a task
+- use tree menu to update, mark as favorite or put a task to bin
+- click on task to see the detail
+- update the task
+- mark the task as favorite
+- put task as favorite
+- restore a task from bin
+- delete all tasks in the bin
